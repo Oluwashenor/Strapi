@@ -6,17 +6,8 @@ import { factories } from '@strapi/strapi';
 
 export default {
     routes: [
-      { // Path defined with a URL parameter
-        method: 'GET',
-        path: '/food/suggest',
-        handler: 'food.suggestFood',
-        config:{
-                auth: false,
-                policies: [],
-                middlewares: [],
-        }
-      },
-      { // Path defined with a URL parameter
+      
+      { 
         method: 'GET',
         path: '/food/:id',
         handler: 'food.get',
