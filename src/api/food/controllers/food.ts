@@ -29,7 +29,7 @@ export default factories.createCoreController('api::food.food', ({ strapi }) => 
    
     async create(context){
      try{
-       let body = context.request.body.data
+       const body = context.request.body.data
        const entry = await strapi.service('api::food.food').create(body)
        context.body = entry
      }
@@ -42,7 +42,7 @@ export default factories.createCoreController('api::food.food', ({ strapi }) => 
      try {
        const id = context.params.id
        const body = context.request.body.data
-       let data =  await strapi.service('api::food.food').update(id,body)
+       const data =  await strapi.service('api::food.food').update(id,body)
        context.body = data
      } catch (error) {
        console.log(error)
