@@ -12,7 +12,7 @@ export default {
       handler: 'food.suggestFood',
       config: {
         auth: false,
-        policies: [],
+        policies: ['global::only-four'],
         middlewares: [],
       }
     },
